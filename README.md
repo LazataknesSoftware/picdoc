@@ -17,20 +17,20 @@ Linux and MacOS are not supported. However, you can build `picdoc` from source.
 
 <DIV ALIGN="center"><h3>Testing picture:</h3>
 
-<img src="https://github.com/LazataknesSoftware/blob/picdoc/resources/fidsico.ico">
+<img src="https://github.com/LazataknesSoftware/picdoc/blob/main/resources/fidsico.ico">
 
 </div>
 
 On Windows with `cmd.exe/conhost.exe`:
 
-![cmd.exe/conhost.exe](https://github.com/LazataknesSoftware/picdoc/blob/resources/picdoc_proof_windows.PNG)
+![cmd.exe/conhost.exe](https://github.com/LazataknesSoftware/picdoc/blob/main/resources/picdoc_proof_windows.PNG)
 
 **IMPORTANT!** `conhost.exe` supports 16 colors only, so color image may be incorrect!
 
 
 On Android `(PuTTY/Termux)`:
 
-![PuTTY/Termux](https://github.com/LazataknesSoftware/picdoc/blob/resources/picdoc_proof.PNG)
+![PuTTY/Termux](https://github.com/LazataknesSoftware/picdoc/blob/main/resources/picdoc_proof.PNG)
 
 <DIV ALIGN="CENTER"><h1>Flags of this tool</h1></div>
 
