@@ -7,9 +7,8 @@
 <DIV ALIGN="CENTER"><H1>Требования</H1></DIV>
 
 * Windows 11
-* Android: [Termux](https://github.com/termux-app/termux)
 
-Linux и MacOS не поддерживаются, однако вы можете собрать `picdoc` из исходного кода.
+Linux, MacOS и Android (с версии программы v2.0.0) не поддерживаются, однако вы можете собрать `picdoc` из исходного кода.
 
 <DIV ALIGN="CENTER"><h1>Деомнстрация работы</h1></div>
 
@@ -49,9 +48,8 @@ Linux и MacOS не поддерживаются, однако вы можете
 <DIV ALIGN="CENTER"><H1>Requirements</H1></DIV>
 
 * Windows 11
-* Android: [Termux](https://github.com/termux-app/termux)
 
-Linux and MacOS are not supported. However, you can build `picdoc` from source.
+Linux, MacOS and Android (since program version v2.0.0) are not supported. However, you can build `picdoc` from source.
 
 <DIV ALIGN="CENTER"><h1>Demo</h1></div>
 
