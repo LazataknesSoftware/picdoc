@@ -1,0 +1,5 @@
+{
+  "error_filenotfound": "Файл не найден. Запустите picdoc.exe с именем файла:\npicdoc.exe <имя-файла>",
+  "error_unrecognizablefiletype": "Неверный тип файла. picdoc.exe работает только со следующими форматами: JPG, PNG и ICO",
+  "help_backgraywhite": "Пропустить оттенки черного, серого и белого цветов"
+}

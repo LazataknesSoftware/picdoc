@@ -5,19 +5,34 @@ import (
   "image"
   "flag"
   "path/filepath"
+  "encoding/json"
   _ "image/png"
   _ "image/jpeg"
 	color "github.com/gookit/color"
 	ico "github.com/mat/besticon/ico"
   color_extractor "github.com/marekm4/color-extractor"
+  locallib "github.com/jeandeaual/go-locale"
 )
+type ErrorDescription struct {
+  Error_filenotfound string
+  Error_unrecognizablefiletype string
+  Help_blackgraywhite string
+}
 func main() {
+  Lang := ErrorDescription{}
+  UserLocale, _ := locallib.GetLanguage()
+  Localefile, not_ru_or_en := os.ReadFile(fmt.Sprintf("picdoc_locale_%s.json",UserLocale));
+  if not_ru_or_en != nil {
+    UserLocale = "en"
+  }
+  _ = json.Unmarshal(Localefile, &Lang)
+
   var SkipCommon bool
-  flag.BoolVar(&SkipCommon, "C", false, "Skip black, white and gray colors")
+  flag.BoolVar(&SkipCommon, "C", false, Lang.Help_blackgraywhite)
   flag.Parse()
   pic, where_is_file := os.Open(flag.Arg(0))
   if where_is_file != nil {
-    fmt.Println("I did not find file. Run picdoc with filename.")
+    fmt.Println(Lang.Error_filenotfound)
     os.Exit(1)
   }
   var dec image.Image
@@ -27,7 +42,7 @@ func main() {
   } else if ext == ".ico" {
     dec,_ = ico.Decode(pic)
 	} else {
-		fmt.Println("I can't recognize file. Is it picture (PNG, JPG, JPEG, ICO)?")
+		fmt.Println(Lang.Error_unrecognizablefiletype)
 		os.Exit(1)
 	}
   colors := color_extractor.ExtractColors(dec)
